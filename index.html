@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo list</title>
+
+    <link rel="stylesheet" href="css/materialize.css">
+    
+    <link rel="stylesheet" href="css/todo.css">
+      <!-- 구글 웹 폰트 -->
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Sunflower:wght@500&display=swap" rel="stylesheet">
+    <!-- 아이콘 -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body>
+
+
+  <div id="container">
+    <header>
+        <h1>Todo list</h1>
+        
+    </header>
+
+    <section>
+    
+
+        
+    <form class="js-todoForm">
+
+    <div class="row">
+      <div class="input-field col s2 offset-s5">
+          <input type="text" text-align="center" id="Add_todo" placeholder="클릭하여 추가해 보세요!" title="클릭!" autocomplete="off" >
+      </div>
+    </div>
+   
+      <div id="out-box">
+         <!-- 투두 ul태그 -->
+         <h6>아직은 할일이 없네요!</h6>
+
+        <ul class="js-todoList">
+
+          <!-- 할일 목록들-->
+          
+          
+        </ul>
+
+      </div>
+
+    </form>
+
+    
+      <footer>
+        
+        <a href="https://hardtack.dev" target="_blank">&copy; - made by Hardtack</a>
+        
+      </footer>
+             
+    </section>
+</div>
+    <!-- JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="js/todo.js"></script>
+</body>
+</html>
