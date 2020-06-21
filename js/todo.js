@@ -24,7 +24,7 @@ function showTodos(value){
     span.innerText = value;
 
     //삭제하는 버튼
-    const delBtn = document.createElement('button'); //Matreailz에서는 a태그로 버튼을 만듬
+    const delBtn = document.createElement('a'); //Matreailz에서는 a태그로 버튼을 만듬
     delBtn.className = 'waves-effect #ffecb3 amber lighten-4 waves-heavy btn-small type=submit '; //btn-flat도 이쁨!
     delBtn.innerText = '🗑️';
     div.appendChild(delBtn); //label이나 span 밑으로 하면 같이 클릭됨 (체크박스하고)
