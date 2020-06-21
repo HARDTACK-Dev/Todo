@@ -11,6 +11,8 @@ const todos = []; //배열임!
 
 
 function showTodos(value){
+    if(value === "" || value.trim()==="") return; //공백만 입력될때 Todo 추가를 제한함. 원래 아래쪽에서 해주려고 했는데 return하면 페이지가 새로고침되길래,,? /HDJ
+
     const div = document.createElement('div')
     div.className = 'task'; //클래스 이름이 task인 div를 생성!
 
@@ -61,30 +63,26 @@ function showTodos(value){
     //삭제 버튼을 누르면,
      document.getElementById(newId).onclick = function () {
 
-        var taskdel = document.getElementById(newId);       //지워주기 위해 taskdel이란 함수를 만듬!
-        return taskdel.parentNode.removeChild(taskdel);     // taskdel에 newId는 delBtn에 할당 되어있으므로 delBtn삭제
+        let taskdel = document.getElementById(newId);       //지워주기 위해 taskdel이란 함수를 만듬!
+        return todoList.removeChild(taskdel.parentElement); // 삭제버튼의 부모엘리먼트(task)를 가져와서 task의 부모인 todoList에서 지워줌.
+        // return taskdel.parentElement   <- 이건 삭제 "버튼"을 지우는거지 Todo를 지우는게 아님! /HDJ
       };
    
 }   
 
 
-function handleSubmit(event){
+function handleSubmit(event){ 
     event.preventDefault();
     const currentValue = todoInput.value;
     showTodos(currentValue);
     todoInput.value = '';
-
-    
 }
-
-
 
 
 
 function init(){
     form.addEventListener('submit', handleSubmit);
-    
-    
+     
 }
 
 init();
